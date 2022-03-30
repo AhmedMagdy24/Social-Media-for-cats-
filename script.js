@@ -17,17 +17,29 @@ const cats = [
 
 
 
+const catBasket = document.getElementById("cat-basket")
+
+cats.forEach(cat => {
+    const card = document.createElement('div')
+    card.classList.add('card')
+    catBasket.appendChild(card)
+
+    const pic = document.createElement('img')
+    pic.classList.add('pic')
+    pic.src = cat.thumbnail
+    card.appendChild(pic)
+
+    const catName = document.createElement('h2')
+    catName.classList.add('cat-name')
+    catName.innerHTML = cat.name
+    card.appendChild(catName)
+})
 
 
+function myFunction() {
+    const element = document.body
+    element.classList.toggle('dark')
+    }
 
-function renderCats(data) {
-    const {name, thumbnail,} = data
-    document.getElementById("cats").innerHTML =
-        `
-            <h4 class="cat-basket"> ${name} </h4>
-            <img class="pic" src="${thumbnail}" />
-        `
-}
 
-renderCats(cats)
 

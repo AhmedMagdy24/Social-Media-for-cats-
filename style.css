@@ -28,6 +28,7 @@ h1 > span {
     
 }
 
+
 .cat-basket {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -53,4 +54,9 @@ h1 > span {
 .pic {
     max-height: 200px;
     margin: 0 auto;
+}
+
+.dark{
+    background-color: #222;
+    color: #e6e6e6;
 }
